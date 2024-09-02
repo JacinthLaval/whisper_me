@@ -3,6 +3,7 @@ from streamlit_mic_recorder import speech_to_text
 from snowflake.snowpark import Session
 
 st.write("DB username:", st.secrets["user"])
+
 # Create a Snowflake session
 def create_session():
     connection_parameters = st.secrets["connections.snowflake"]

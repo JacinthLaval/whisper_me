@@ -1,16 +1,19 @@
 import streamlit as st
 import whisper
-from audio_recorder_streamlit import audio_recorder
-import openai
-import base64
+from streamlit_mic_recorder import speech_to_text
 
-def main():
+def callback():
+    if st.session_state.my_stt_output:
+        st.write(st.session_state.my_stt_output)
 
-    st.sidebar.title("API Key")
-    api_key = st.sidebar.text_input("Enter API Key", type="password")
-
-if __name__ == "__main__":
-    main()
+# Set up the speech-to-text component
+speech_to_text(
+    language='en',  # Specify the language for speech recognition
+    start_prompt="Start recording",
+    stop_prompt="Stop recording",
+    key='my_stt',
+    callback=callback
+)
     
 @st.cache_resource
 def load_whisper_model():

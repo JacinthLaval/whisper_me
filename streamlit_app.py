@@ -1,6 +1,17 @@
 import streamlit as st
 import whisper
+from audio_recorder_streamlit import audio_recorder
+import openai
+import base64
 
+def main():
+
+    st.sidebar.title("API Key")
+    api_key = st.sidebar.text_input("Enter API Key", type="password")
+
+if __name__ == "__main__":
+    main()
+    
 @st.cache_resource
 def load_whisper_model():
     return whisper.load_model("base")

@@ -1,5 +1,15 @@
 import streamlit as st
 from streamlit_mic_recorder import speech_to_text
+from snowflake.snowpark import Session
+
+# Create a Snowflake session
+def create_session():
+    connection_parameters = st.secrets["connections.snowflake"]
+    session = Session.builder.configs(connection_parameters).create()
+    return session
+
+session = create_session()
+st.success("Connected to Snowflake!")
 
 def callback():
     if st.session_state.my_stt_output:

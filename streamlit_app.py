@@ -13,3 +13,6 @@ speech_to_text(
     key='my_stt',
     callback=callback
 )
+
+details_val = st.session_state.my_stt_output
+st.write(details_val)

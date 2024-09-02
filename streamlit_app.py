@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_mic_recorder import speech_to_text
 from snowflake.snowpark import Session
+import os
 
 # Create a Snowflake session
 def create_session():

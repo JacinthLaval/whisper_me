@@ -2,19 +2,24 @@ import streamlit as st
 from streamlit_mic_recorder import speech_to_text
 from snowflake.snowpark import Session
 
-if 'key' not in st.session_state:
-    st.session_state['key'] = 'initial_value'
+def init_connection():
+    return snowflake.connector.connect(**st.secrets["connections.snowflake"])
 
-st.write("DB username:", st.secrets["user"])
+conn = init_connection()
+
+# if 'key' not in st.session_state:
+#   st.session_state['key'] = 'initial_value'
+
+# st.write("DB username:", st.secrets["user"])
 
 # Create a Snowflake session
-def create_session():
-    connection_parameters = st.secrets["connections.snowflake"]
-    session = Session.builder.configs(connection_parameters).create()
-    return session
+# def create_session():
+#  connection_parameters = st.secrets["connections.snowflake"]
+#  session = Session.builder.configs(connection_parameters).create()
+#   return session
 
-session = create_session()
-st.success("Connected to Snowflake!")
+# session = create_session()
+# st.success("Connected to Snowflake!")
 
 def callback():
     if st.session_state.my_stt_output:

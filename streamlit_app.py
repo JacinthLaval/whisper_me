@@ -4,7 +4,7 @@ import snowflake.connector
 from snowflake.snowpark import Session
 
 def init_connection():
-    return snowflake.connector.connect(**st.secrets["connections.snowflake"])
+    return snowflake.connector.connect(**st.secrets["secrets.toml"])
 
 conn = init_connection()
 

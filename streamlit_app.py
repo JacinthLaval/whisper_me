@@ -1,5 +1,3 @@
-pip install openai-whisper
-
 import streamlit as st
 import whisper
 

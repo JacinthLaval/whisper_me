@@ -12,7 +12,7 @@ if 'key' not in st.session_state:
 
 st.write(st.session_state)
 
-print(st.__version__)
+st.write(st.__version__)
 
 # conn = st.connection("snowflake")
 

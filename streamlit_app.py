@@ -12,6 +12,8 @@ if 'key' not in st.session_state:
 
 st.write(st.session_state)
 
+print(st.__version__)
+
 conn = st.connection("snowflake")
 
 # ACCOUNT = st.secrets["connections.snowflake"]["account"]

@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_mic_recorder import speech_to_text
-from snowflake.snowpark import Session
+# from snowflake.snowpark import Session
 
 "st.session_state object:", st.session_state
 

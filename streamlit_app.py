@@ -14,7 +14,7 @@ st.write(st.session_state)
 
 st.write(st.__version__)
 
-# conn = st.connection("snowflake")
+conn = st.connection("snowflake")
 
 # ACCOUNT = st.secrets["connections.snowflake"]["account"]
 

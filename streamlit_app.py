@@ -7,6 +7,9 @@ from snowflake.snowpark import Session
 if 'a_counter' not in st.session_state:
     st.session_state['a_counter'] = 0
 
+if 'key' not in st.session_state:
+    st.session_state['key'] = 0
+
 st.write(st.session_state)
 
 # st.write("DB username:", st.secrets["user"])

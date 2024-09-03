@@ -4,6 +4,11 @@ from snowflake.snowpark import Session
 
 "st.session_state object:", st.session_state
 
+if 'a_counter' not in st.session_state:
+    st.session_state['a_counter'] = 0
+
+st.write(st.session_state)
+
 # st.write("DB username:", st.secrets["user"])
 
 # Create a Snowflake session

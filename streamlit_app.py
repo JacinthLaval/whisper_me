@@ -12,7 +12,8 @@ if 'key' not in st.session_state:
 
 st.write(st.session_state)
 
-ACCOUNT = st.secrets["connections.snowflake"]["account"]
+
+# ACCOUNT = st.secrets["connections.snowflake"]["account"]
 
 # st.write("DB username:", st.secrets['user'])
 

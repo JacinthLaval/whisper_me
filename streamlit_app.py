@@ -3,15 +3,10 @@ from streamlit_mic_recorder import speech_to_text
 import snowflake.connector
 from snowflake.snowpark import Session
 
-def init_connection():
-    return snowflake.connector.connect(**st.secrets["secrets.toml"])
-
-conn = init_connection()
-
 # if 'key' not in st.session_state:
 #   st.session_state['key'] = 'initial_value'
 
-# st.write("DB username:", st.secrets["user"])
+st.write("DB username:", st.secrets["user"])
 
 # Create a Snowflake session
 # def create_session():

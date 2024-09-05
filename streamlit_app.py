@@ -15,7 +15,7 @@ st.write(st.session_state)
 
 st.write(st.__version__)
 
-st.write("DB username:", st.secrets['user'])
+# st.write("DB username:", st.secrets['user'])
 
 conn = st.connection("snowflake")
 

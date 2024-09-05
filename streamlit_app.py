@@ -15,11 +15,11 @@ st.write(st.session_state)
 
 st.write(st.__version__)
 
+st.write("DB username:", st.secrets['user'])
+
 conn = st.connection("snowflake")
 
 # ACCOUNT = st.secrets["connections.snowflake"]["account"]
-
-# st.write("DB username:", st.secrets['user'])
 
 # Create a Snowflake session
 # def create_session():
